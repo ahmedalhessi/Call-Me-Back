@@ -1,0 +1,33 @@
+name: call_me_back
+description: "Call Me Back"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^5.6.1
+  flutter_svg: ^1.1.6
+  get: ^4.6.5
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/home/
+    - assets/images/on_boarding/
+    - assets/images/icons/
