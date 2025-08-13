@@ -4,8 +4,8 @@ import '../../core/constants/colors_manager.dart';
 
 class TextStylesManager {
   static final TextStyle title = TextStyle(
-    fontSize: 22.sp,
-    fontWeight: FontWeight.bold,
+    fontSize: 30.sp,
+    color: ColorsManager.titleColor,
   );
   static final TextStyle subTitle = TextStyle(
     fontSize: 15.sp,

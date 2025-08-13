@@ -81,7 +81,7 @@ class SignInScreen extends GetView<SignInController> {
                 SizedBox(height: 18.h),
                 TextButton(
                   onPressed: () {
-                    // Get.toNamed(RoutesManager.forgetPasswordScreen);
+                    Get.toNamed(RoutesManager.forgetPasswordScreen);
                   },
                   style: TextButton.styleFrom(
                     textStyle: TextStyle(
@@ -95,20 +95,18 @@ class SignInScreen extends GetView<SignInController> {
                 SizedBox(height: 50.h),
                 ElevatedButton(
                   onPressed: () async {
-                    if (controller.formKey.currentState!.validate()) {
-                      controller.isLogging(true);
-                      await _performLogin();
-                    }
+                    await _performLogin();
+                    // if (controller.formKey.currentState!.validate()) {
+                    //   controller.isLogging(true);
+                    //   await _performLogin();
+                    // }
                   },
                   child: Text('sign_in'.tr),
                 ),
                 SizedBox(height: 30.h),
                 ElevatedButton(
                   onPressed: () async {
-                    if (controller.formKey.currentState!.validate()) {
-                      controller.isLogging(true);
-                      await _performLoginWithGoogle();
-                    }
+                    await _performLoginWithGoogle();
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: ColorsManager.white,
@@ -130,7 +128,7 @@ class SignInScreen extends GetView<SignInController> {
                     Text('no_account'.tr),
                     TextButton(
                       onPressed: () {
-                        // Get.offNamed(RoutesManager.signUpScreen);
+                        Get.toNamed(RoutesManager.signUpScreen);
                       },
                       child: Text('sign_up'.tr),
                     ),
@@ -152,7 +150,7 @@ class SignInScreen extends GetView<SignInController> {
 
   Future<void> _performLogin() async {
     controller.isLogging.value = false;
-    // Get.offNamed(RoutesManager.onboardingScreen);
+    Get.offNamed(RoutesManager.onboardingScreen);
   }
 
   Future<void> _performLoginWithGoogle() async {

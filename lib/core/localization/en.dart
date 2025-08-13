@@ -26,14 +26,28 @@ Map<String, String> enLocale = {
   'sign_up': 'Sign Up',
   'required_field': 'Required Field',
 
-  // Forget Password
-  'restore_password': '',
-  'forget_password_note': '',
-  'send': '',
+  // Sign Up
+  'write_info': 'Please write your information below',
+  'full_name': 'Full Name',
+  'email': 'Email',
+  'date_of_birth': 'Date of Birth',
+  'have_account': 'You have an account?',
 
-  // Verification Code
-  'verification_code': '',
-  'verification_note': '',
-  'didnt_recieve_code': '',
-  'resend': '',
+  // Forgot Password
+  'forgot_password': 'Forgot Password',
+  'forgot_password_details':
+      'Please enter your email below and we will send you the OTP code',
+  'send': 'Send',
+
+  // Email Verification
+  'email_verification': 'Email Verification',
+  'verification_note':
+      'We sent the OTP code to your email, please check it and enter below',
+
+  // Reset Password
+  'create_new_password': 'Create New Password',
+  'reset_password_subtitle':
+      'And now, you can create the new password and confirm it',
+  'new_password': 'New Password',
+  'confirm_password': 'Confirm Password',
 };

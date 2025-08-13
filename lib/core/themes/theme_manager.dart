@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constants/colors_manager.dart';
 
@@ -9,26 +8,26 @@ class ThemeManager {
       // fontFamily: 'Almarai',
       colorScheme: const ColorScheme.light(primary: ColorsManager.primary),
       scaffoldBackgroundColor: ColorsManager.scaffoldBg,
-      appBarTheme: AppBarTheme(
-        backgroundColor: ColorsManager.white,
-        toolbarHeight: 60,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(bottom: Radius.circular(24.r)),
-        ),
-        centerTitle: true,
-        titleTextStyle: TextStyle(
-          fontSize: 18.sp,
-          color: ColorsManager.black,
-          fontFamily: 'Almarai',
-        ),
-        elevation: 0,
-        iconTheme: const IconThemeData(color: ColorsManager.black),
-        foregroundColor: ColorsManager.white,
-        systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
-          statusBarIconBrightness: Brightness.light,
-        ),
-      ),
+      // appBarTheme: AppBarTheme(
+      //   backgroundColor: ColorsManager.white,
+      //   toolbarHeight: 60,
+      //   shape: RoundedRectangleBorder(
+      //     borderRadius: BorderRadius.vertical(bottom: Radius.circular(24.r)),
+      //   ),
+      //   centerTitle: true,
+      //   titleTextStyle: TextStyle(
+      //     fontSize: 18.sp,
+      //     color: ColorsManager.black,
+      //     fontFamily: 'Almarai',
+      //   ),
+      //   elevation: 0,
+      //   iconTheme: const IconThemeData(color: ColorsManager.black),
+      //   foregroundColor: ColorsManager.white,
+      //   systemOverlayStyle: const SystemUiOverlayStyle(
+      //     statusBarColor: Colors.transparent,
+      //     statusBarIconBrightness: Brightness.light,
+      //   ),
+      // ),
       textTheme: TextTheme(
         labelLarge: TextStyle(fontSize: 16.sp, fontFamily: 'Almarai'),
         bodyMedium: TextStyle(

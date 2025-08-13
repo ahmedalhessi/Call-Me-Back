@@ -76,19 +76,19 @@ class TextFieldWidget extends StatelessWidget {
               fontSize: 14.sp,
             ),
             suffixIcon: suffixIcon,
-            prefixIcon: isPassword
-                ? Icon(
-                    Icons.lock_outline_rounded,
-                    color: ColorsManager.subtitleColor,
-                    size: 24.h,
-                  )
-                : isPhone
-                ? Icon(
-                    Icons.phone_android_outlined,
-                    color: ColorsManager.subtitleColor,
-                    size: 24.h,
-                  )
-                : prefixIcon,
+            // prefixIcon: isPassword
+            //     ? Icon(
+            //         Icons.lock_outline_rounded,
+            //         color: ColorsManager.subtitleColor,
+            //         size: 24.h,
+            //       )
+            //     : isPhone
+            //     ? Icon(
+            //         Icons.phone_android_outlined,
+            //         color: ColorsManager.subtitleColor,
+            //         size: 24.h,
+            //       )
+            //     : prefixIcon,
             errorMaxLines: 2,
             errorStyle: const TextStyle(color: ColorsManager.danger),
             filled: true,
