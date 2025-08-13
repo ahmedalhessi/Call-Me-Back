@@ -9,4 +9,5 @@ class ImagesManager {
   static const String homePath = '$mainPath/home';
 
   static const String iconsPath = 'assets/images/icons';
+  static const String googleIcon = '$iconsPath/ic_google.svg';
 }

@@ -1,13 +1,13 @@
+import 'package:call_me_back/core/constants/text_styles_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
-import '../core/constants/colors_manager.dart';
-import '../core/constants/images_manager.dart';
-import '../core/routes/routes_manager.dart';
+import '../../core/constants/colors_manager.dart';
+import '../../core/constants/images_manager.dart';
+import '../../core/routes/routes_manager.dart';
 
 class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({Key? key}) : super(key: key);
+  const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class OnboardingScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.sp,
-                      color: ColorsManager.onBoardingTitle,
+                      color: ColorsManager.titleColor,
                       // fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -41,10 +41,7 @@ class OnboardingScreen extends StatelessWidget {
                       'And now, you can create the new password and confirm it'
                           .tr,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 15.sp,
-                        color: ColorsManager.onBoardingbody,
-                      ),
+                      style: TextStylesManager.subTitle,
                     ),
                   ),
                   SizedBox(height: 24.h),
@@ -60,7 +57,7 @@ class OnboardingScreen extends StatelessWidget {
                           width: 60.w,
                           decoration: BoxDecoration(
                             color: index == listViewIndex
-                                ? ColorsManager.buttonBg
+                                ? ColorsManager.primary
                                 : ColorsManager.onBoardingUnselected,
                             borderRadius: BorderRadius.circular(3.r),
                             // border: Border.all(color: ColorsManager.onBoardingUnselected),
@@ -89,7 +86,7 @@ class OnboardingScreen extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12.r),
                       ),
-                      backgroundColor: ColorsManager.buttonBg,
+                      backgroundColor: ColorsManager.primary,
                       foregroundColor: ColorsManager.white,
                     ),
                     child: Text('Let\'s Start'.tr),
