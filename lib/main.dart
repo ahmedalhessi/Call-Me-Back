@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           textDirection: TextDirection.ltr,
           debugShowCheckedModeBanner: false,
           theme: ThemeManager.light(),
-          initialRoute: RoutesManager.signInScreen,
+          initialRoute: RoutesManager.homeScreen,
           getPages: getPages,
           // unknownRoute: GetPage(
           //   name: RoutesManager.unknownScreen,

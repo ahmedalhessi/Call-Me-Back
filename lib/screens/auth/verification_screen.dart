@@ -21,7 +21,7 @@ class VerificationScreen extends GetView<VerificationController> {
           Center(
             child: Text(
               'email_verification'.tr,
-              style: TextStylesManager.title,
+              style: TextStylesManager.headline3,
             ),
           ),
           SizedBox(height: 29.h),
@@ -29,7 +29,7 @@ class VerificationScreen extends GetView<VerificationController> {
             width: 259.w,
             child: Text(
               '${'verification_note'.tr} ',
-              style: TextStylesManager.subTitle,
+              style: TextStylesManager.paragraphRegularSubtitleColor,
               textAlign: TextAlign.center,
             ),
           ),

@@ -41,7 +41,7 @@ class OnboardingScreen extends StatelessWidget {
                       'And now, you can create the new password and confirm it'
                           .tr,
                       textAlign: TextAlign.center,
-                      style: TextStylesManager.subTitle,
+                      style: TextStylesManager.paragraphRegularSubtitleColor,
                     ),
                   ),
                   SizedBox(height: 24.h),
