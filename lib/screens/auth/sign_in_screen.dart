@@ -31,14 +31,14 @@ class SignInScreen extends GetView<SignInController> {
                 Center(
                   child: Text(
                     'sign_in_title'.tr,
-                    style: TextStylesManager.title,
+                    style: TextStylesManager.headline3,
                   ),
                 ),
                 SizedBox(height: 10.6.h),
                 Center(
                   child: Text(
                     'sign_in_subtitle'.tr,
-                    style: TextStylesManager.subTitle,
+                    style: TextStylesManager.paragraphRegularSubtitleColor,
                   ),
                 ),
                 SizedBox(height: 77.h),
@@ -84,10 +84,8 @@ class SignInScreen extends GetView<SignInController> {
                     Get.toNamed(RoutesManager.forgetPasswordScreen);
                   },
                   style: TextButton.styleFrom(
-                    textStyle: TextStyle(
-                      fontSize: 15.sp,
-                      color: ColorsManager.primary,
-                    ),
+                    padding: EdgeInsets.zero,
+                    textStyle: TextStylesManager.paragraphRegularPrimaryColor,
                     alignment: AlignmentDirectional.topEnd,
                   ),
                   child: Text('forget_password'.tr),

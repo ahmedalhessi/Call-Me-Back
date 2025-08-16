@@ -22,7 +22,7 @@ class ResetPasswordScreen extends GetView<ResetPasswordController> {
             Center(
               child: Text(
                 'create_new_password'.tr,
-                style: TextStylesManager.title,
+                style: TextStylesManager.headline3,
               ),
             ),
             SizedBox(height: 29.h),
@@ -31,7 +31,7 @@ class ResetPasswordScreen extends GetView<ResetPasswordController> {
                 width: 256.w,
                 child: Text(
                   'reset_password_subtitle'.tr,
-                  style: TextStylesManager.subTitle,
+                  style: TextStylesManager.paragraphRegularSubtitleColor,
                   textAlign: TextAlign.center,
                 ),
               ),
