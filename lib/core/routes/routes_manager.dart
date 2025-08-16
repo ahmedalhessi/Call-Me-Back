@@ -9,5 +9,6 @@ class RoutesManager {
   static const resetPasswordScreen = '/reset_password_screen';
 
   static const homeScreen = '/home_screen';
+  static const mainScreen = '/main_screen';
   static const unknownScreen = '/unknown_screen';
 }
