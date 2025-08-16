@@ -1,11 +1,10 @@
+import 'package:call_me_back/core/models/service_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constants/text_styles_manager.dart';
 
 class ServiceItemWidget extends StatelessWidget {
-  final String imageUrl;
-  final String name;
-  final String price;
+  final ServiceModel serviceModel;
   // final double containerHeight;
   final double imageHeight;
   final int maxLines;
@@ -15,9 +14,7 @@ class ServiceItemWidget extends StatelessWidget {
 
   ServiceItemWidget.recommendedCard({
     super.key,
-    required this.imageUrl,
-    required this.name,
-    required this.price,
+    required this.serviceModel,
     required this.onPressed,
   }) : imageHeight = 165,
        nameStyle = TextStylesManager.paragraphSemibold,
@@ -26,9 +23,7 @@ class ServiceItemWidget extends StatelessWidget {
 
   ServiceItemWidget.normalCard({
     super.key,
-    required this.imageUrl,
-    required this.name,
-    required this.price,
+    required this.serviceModel,
     required this.onPressed,
   }) : imageHeight = 86,
        nameStyle = TextStylesManager.paragraphRegular,
@@ -57,7 +52,7 @@ class ServiceItemWidget extends StatelessWidget {
                   topRight: Radius.circular(12.r),
                 ),
                 image: DecorationImage(
-                  image: AssetImage(imageUrl),
+                  image: AssetImage(serviceModel.imageUrl),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -68,14 +63,14 @@ class ServiceItemWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    name,
+                    serviceModel.name,
                     style: nameStyle,
                     maxLines: maxLines,
                     overflow: TextOverflow.ellipsis,
                   ),
                   SizedBox(height: 11.h),
                   Text(
-                    price,
+                    serviceModel.price,
                     style: priceStyle,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,

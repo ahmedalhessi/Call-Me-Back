@@ -1,9 +1,9 @@
-import 'package:call_me_back/core/constants/colors_manager.dart';
 import 'package:call_me_back/core/constants/images_manager.dart';
 import 'package:call_me_back/core/constants/text_styles_manager.dart';
+import 'package:call_me_back/core/models/service_model.dart';
+import 'package:call_me_back/core/widgets/home_header_card.dart';
 import 'package:call_me_back/core/widgets/home_section_card.dart';
 import 'package:call_me_back/core/widgets/service_item_widget.dart';
-import 'package:call_me_back/core/widgets/text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Los Angeles, California, USA",
+          "Los Angeles, California, USA", //TODO: use location service
           style: TextStylesManager.subTitleSemibold,
         ),
       ),
@@ -58,7 +58,10 @@ class HomeScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w),
-            child: buildHeader(),
+            child: HomeHeaderCard(
+              name: 'Selena', //TODO: use user data
+              searchController: TextEditingController(),
+            ),
           ),
           SizedBox(height: 15.h),
 
@@ -87,10 +90,13 @@ class HomeScreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return ServiceItemWidget.recommendedCard(
+                  serviceModel: ServiceModel(
+                    id: index,
+                    imageUrl: sectionOneDummyData[index]['imageUrl'],
+                    name: sectionOneDummyData[index]['name'],
+                    price: sectionOneDummyData[index]['price'],
+                  ),
                   onPressed: () => print('Service Item Pressed'),
-                  imageUrl: sectionOneDummyData[index]['imageUrl'],
-                  name: sectionOneDummyData[index]['name'],
-                  price: sectionOneDummyData[index]['price'],
                 );
               },
               separatorBuilder: (context, index) => SizedBox(width: 16.w),
@@ -110,9 +116,12 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ServiceItemWidget.normalCard(
                   onPressed: () => print('Service Item Pressed'),
-                  imageUrl: section2Dummy[index]['imageUrl'],
-                  name: section2Dummy[index]['name'],
-                  price: section2Dummy[index]['price'],
+                  serviceModel: ServiceModel(
+                    id: index,
+                    imageUrl: section2Dummy[index]['imageUrl'],
+                    name: section2Dummy[index]['name'],
+                    price: section2Dummy[index]['price'],
+                  ),
                 );
               },
               separatorBuilder: (context, index) => SizedBox(width: 16.w),
@@ -132,10 +141,12 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ServiceItemWidget.normalCard(
                   onPressed: () => print('Service Item Pressed'),
-
-                  imageUrl: sectionOneDummyData[index]['imageUrl'],
-                  name: sectionOneDummyData[index]['name'],
-                  price: sectionOneDummyData[index]['price'],
+                  serviceModel: ServiceModel(
+                    id: index,
+                    imageUrl: section2Dummy[index]['imageUrl'],
+                    name: section2Dummy[index]['name'],
+                    price: section2Dummy[index]['price'],
+                  ),
                 );
               },
               separatorBuilder: (context, index) => SizedBox(width: 16.w),
@@ -155,53 +166,18 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ServiceItemWidget.normalCard(
                   onPressed: () => print('Service Item Pressed'),
-
-                  imageUrl: sectionOneDummyData[index]['imageUrl'],
-                  name: sectionOneDummyData[index]['name'],
-                  price: sectionOneDummyData[index]['price'],
+                  serviceModel: ServiceModel(
+                    id: index,
+                    imageUrl: section2Dummy[index]['imageUrl'],
+                    name: section2Dummy[index]['name'],
+                    price: section2Dummy[index]['price'],
+                  ),
                 );
               },
               separatorBuilder: (context, index) => SizedBox(width: 16.w),
               itemCount: sectionOneDummyData.length,
             ),
           ),
-        ],
-      ),
-    );
-  }
-
-  Container buildHeader() {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.h),
-
-      decoration: BoxDecoration(
-        color: ColorsManager.primary,
-        borderRadius: BorderRadius.circular(12.r),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text.rich(
-            TextSpan(
-              children: [
-                TextSpan(text: 'Hey, ', style: TextStylesManager.bodySemibold),
-                TextSpan(
-                  text: 'Selena',
-                  style: TextStylesManager.bodySemiboldWhite,
-                ),
-              ],
-            ),
-          ),
-          Text(
-            'Can I help you something?',
-            style: TextStylesManager.paragraphRegular.copyWith(
-              color: Color(0xFF9CC1E9),
-            ),
-          ),
-          SizedBox(height: 20.h),
-          TextFieldWidget.search(controller: TextEditingController()),
-          //TODO: build Cateogories
         ],
       ),
     );
