@@ -19,10 +19,15 @@ class SignUpScreen extends GetView<SignUpController> {
         child: ListView(
           padding: EdgeInsets.symmetric(vertical: 19.h, horizontal: 16.w),
           children: [
-            Center(child: Text('sign_up'.tr, style: TextStylesManager.title)),
+            Center(
+              child: Text('sign_up'.tr, style: TextStylesManager.headline3),
+            ),
             SizedBox(height: 27.h),
             Center(
-              child: Text('write_info'.tr, style: TextStylesManager.subTitle),
+              child: Text(
+                'write_info'.tr,
+                style: TextStylesManager.paragraphRegularSubtitleColor,
+              ),
             ),
             SizedBox(height: 51.h),
             TextFieldWidget(

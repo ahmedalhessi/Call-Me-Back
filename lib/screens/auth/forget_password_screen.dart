@@ -22,7 +22,10 @@ class ForgetPasswordScreen extends GetView<ForgetPasswordController> {
           padding: EdgeInsets.symmetric(horizontal: 16.w),
           children: [
             Center(
-              child: Text('forgot_password'.tr, style: TextStylesManager.title),
+              child: Text(
+                'forgot_password'.tr,
+                style: TextStylesManager.headline3,
+              ),
             ),
             SizedBox(height: 29.h),
             Center(
@@ -30,7 +33,7 @@ class ForgetPasswordScreen extends GetView<ForgetPasswordController> {
                 width: 259.w,
                 child: Text(
                   'forgot_password_details'.tr,
-                  style: TextStylesManager.subTitle,
+                  style: TextStylesManager.paragraphRegularSubtitleColor,
                   textAlign: TextAlign.center,
                 ),
               ),
