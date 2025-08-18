@@ -20,6 +20,11 @@ class ColorsManager {
   static const Color outlineBorder = Color(0xFFE6E8EB);
   // static const Color shadow = Color(0x0D000000);
   static const Color danger = Color(0xFFFF2222);
+  static const Color blue = Color(0xff42AAFF);
+  static const Color purple = Color(0xffA375FF);
+  static const Color green = Color(0xff74C54C);
+
+
   // static const Color success = Color(0xFF20CE8C);
   // static const Color skipColor = Color(0xFF6E6E77);
   // static const Color showMoreColor = Color(0xFF707070);

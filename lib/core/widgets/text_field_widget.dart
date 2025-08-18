@@ -142,7 +142,7 @@ class TextFieldWidget extends StatelessWidget {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12.r),
                 borderSide: const BorderSide(
-                  color: ColorsManager.outlineBorder,
+                  color: ColorsManager.white,
                 ),
               ),
               errorBorder: OutlineInputBorder(

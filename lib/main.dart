@@ -6,6 +6,7 @@ import 'core/routes/get_pages.dart';
 import 'core/routes/routes_manager.dart';
 import 'core/themes/theme_manager.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           textDirection: TextDirection.ltr,
           debugShowCheckedModeBanner: false,
           theme: ThemeManager.light(),
-          initialRoute: RoutesManager.signInScreen,
+          initialRoute: RoutesManager.servicesScreen,
           getPages: getPages,
           // unknownRoute: GetPage(
           //   name: RoutesManager.unknownScreen,

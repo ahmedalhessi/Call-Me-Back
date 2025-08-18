@@ -10,4 +10,5 @@ class RoutesManager {
 
   static const homeScreen = '/home_screen';
   static const unknownScreen = '/unknown_screen';
+  static const servicesScreen = '/services_screen';
 }
