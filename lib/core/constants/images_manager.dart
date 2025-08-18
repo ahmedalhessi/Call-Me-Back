@@ -10,10 +10,15 @@ class ImagesManager {
 
   static const String iconsPath = 'assets/images/icons';
   static const String googleIcon = '$iconsPath/ic_google.svg';
+  static const String homeIcon = '$iconsPath/ic_home.svg';
+  static const String tasksIcon = '$iconsPath/ic_tasks.svg';
+  static const String inboxIcon = '$iconsPath/ic_inbox.svg';
+  static const String profileIcon = '$iconsPath/ic_profile.svg';
+  static const String searchIcon = '$iconsPath/search.svg';
 
   static const String service1 = '$homePath/service1.jpg';
   static const String service2 = '$homePath/service2.jpg';
   static const String service3 = '$homePath/service3.jpg';
   static const String service4 = '$homePath/service4.jpg';
-  static const String searchIcon = '$iconsPath/search.svg';
+
 }
