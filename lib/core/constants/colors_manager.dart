@@ -23,6 +23,8 @@ class ColorsManager {
   static const Color blue = Color(0xff42AAFF);
   static const Color purple = Color(0xffA375FF);
   static const Color green = Color(0xff74C54C);
+  static const Color yellow = Color(0xffFFCF00);
+
 
 
   // static const Color success = Color(0xFF20CE8C);

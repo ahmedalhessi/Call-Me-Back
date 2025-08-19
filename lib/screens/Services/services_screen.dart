@@ -2,7 +2,7 @@ import 'package:call_me_back/core/constants/colors_manager.dart';
 import 'package:call_me_back/core/constants/images_manager.dart';
 import 'package:call_me_back/core/constants/text_styles_manager.dart';
 import 'package:call_me_back/core/widgets/badges_widget.dart';
-import 'package:call_me_back/core/widgets/service_card_widget.dart';
+import 'package:call_me_back/core/widgets/vendor_card_widget.dart';
 import 'package:call_me_back/core/widgets/text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -52,11 +52,10 @@ class _ServicesState extends State<Services> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TabBar(
-
                     isScrollable: true,
                     tabAlignment: TabAlignment.center,
                     dividerColor: Colors.transparent,
-                    labelPadding: const EdgeInsets.symmetric(horizontal: 30,),
+                    labelPadding: const EdgeInsets.symmetric(horizontal: 30),
                     indicatorPadding: EdgeInsets.zero,
                     indicatorSize: TabBarIndicatorSize.tab,
                     indicator: BoxDecoration(
@@ -65,8 +64,14 @@ class _ServicesState extends State<Services> {
                     ),
                     labelColor: Colors.white,
                     unselectedLabelColor: ColorsManager.subtitleColor,
-                    labelStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.normal),
-                    unselectedLabelStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.normal),
+                    labelStyle: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                    ),
+                    unselectedLabelStyle: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                    ),
                     tabs: const [
                       Tab(text: 'All'),
                       Tab(text: 'Ratings'),
@@ -93,7 +98,7 @@ class _ServicesState extends State<Services> {
                         controller: searchController,
                       ),
                     ),
-                    ServicesCardWidget(
+                    VendorCardWidget.vendor(
                       title: "Lawn Starter Lawn Care",
                       imgPath: ImagesManager.person1,
                       location: "Serves Phonix,Los Angeles",
@@ -111,7 +116,7 @@ class _ServicesState extends State<Services> {
                         ),
                       ],
                     ),
-                    ServicesCardWidget(
+                    VendorCardWidget.vendor(
                       title: "Outdoor Landscaping And Design",
                       imgPath: ImagesManager.person2,
                       location: "Jezojcaw,Los Angeles",
@@ -125,7 +130,7 @@ class _ServicesState extends State<Services> {
                         ),
                       ],
                     ),
-                    ServicesCardWidget(
+                    VendorCardWidget.vendor(
                       title: "Swimming Pool Cleaning",
                       imgPath: ImagesManager.person4,
                       location: "Hohikor,Los Angeles",
@@ -139,7 +144,7 @@ class _ServicesState extends State<Services> {
                         ),
                       ],
                     ),
-                    ServicesCardWidget(
+                    VendorCardWidget.vendor(
                       title: "Fence And Gate Installation",
                       imgPath: ImagesManager.person3,
                       location: "Hohikor,Los Angeles",
@@ -157,6 +162,8 @@ class _ServicesState extends State<Services> {
                         ),
                       ],
                     ),
+
+
                   ],
                 ),
               ),
@@ -182,4 +189,68 @@ class _ServicesState extends State<Services> {
   }
 }
 
-
+// CompletedVendorCard(imgPath: "assets/person1.png", text: "lawn care lawn starter", rate: 5, price: 110, dateTime: DateTime(2020,),),
+//        VendorCardWidget(
+//          title: "Lawn Starter Lawn Care",
+//          imgPath: ImagesManager.person1,
+//          location: "Serves Phonix,Los Angeles",
+//          price: 50,
+//          rating: 5,
+//          reviews: 93,
+//          badges: [
+//            BadgeWidget(
+//              text: "In High Demand",
+//              color: ColorsManager.blue,
+//            ),
+//            BadgeWidget(
+//              text: "Discount Available",
+//              color: ColorsManager.purple,
+//            ),
+//          ],
+//        ),
+//        VendorCardWidget(
+//          title: "Outdoor Landscaping And Design",
+//          imgPath: ImagesManager.person2,
+//          location: "Jezojcaw,Los Angeles",
+//          price: 32,
+//          rating: 4,
+//          reviews: 127,
+//          badges: [
+//            BadgeWidget(
+//              text: "Offers Remote Available",
+//              color: ColorsManager.green,
+//            ),
+//          ],
+//        ),
+//        VendorCardWidget(
+//          title: "Swimming Pool Cleaning",
+//          imgPath: ImagesManager.person4,
+//          location: "Hohikor,Los Angeles",
+//          price: 25,
+//          rating: 4,
+//          reviews: 93,
+//          badges: [
+//            BadgeWidget(
+//              text: "In High Demand",
+//              color: ColorsManager.blue,
+//            ),
+//          ],
+//        ),
+//        VendorCardWidget(
+//          title: "Fence And Gate Installation",
+//          imgPath: ImagesManager.person3,
+//          location: "Hohikor,Los Angeles",
+//          price: 50,
+//          rating: 5,
+//          reviews: 22,
+//          badges: [
+//            BadgeWidget(
+//              text: "In High Demand",
+//              color: ColorsManager.blue,
+//            ),
+//            BadgeWidget(
+//              text: "Discount Available",
+//              color: ColorsManager.purple,
+//            ),
+//          ],
+//        ),
