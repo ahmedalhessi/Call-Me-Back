@@ -162,8 +162,8 @@ class _ServicesState extends State<Services> {
                         ),
                       ],
                     ),
-
-
+                    // VendorCardWidget.completed(imgPath: ImagesManager.person1, title: "Swimming pool cleaning", price: 20, rating: 4, dateTime: DateTime(2025)),
+                    // VendorCardWidget.archived(title: "Lawn Starter Lawn Care", price: 120, dateTime: DateTime(2025), imgPath: ImagesManager.person2)
                   ],
                 ),
               ),
@@ -188,69 +188,3 @@ class _ServicesState extends State<Services> {
     );
   }
 }
-
-// CompletedVendorCard(imgPath: "assets/person1.png", text: "lawn care lawn starter", rate: 5, price: 110, dateTime: DateTime(2020,),),
-//        VendorCardWidget(
-//          title: "Lawn Starter Lawn Care",
-//          imgPath: ImagesManager.person1,
-//          location: "Serves Phonix,Los Angeles",
-//          price: 50,
-//          rating: 5,
-//          reviews: 93,
-//          badges: [
-//            BadgeWidget(
-//              text: "In High Demand",
-//              color: ColorsManager.blue,
-//            ),
-//            BadgeWidget(
-//              text: "Discount Available",
-//              color: ColorsManager.purple,
-//            ),
-//          ],
-//        ),
-//        VendorCardWidget(
-//          title: "Outdoor Landscaping And Design",
-//          imgPath: ImagesManager.person2,
-//          location: "Jezojcaw,Los Angeles",
-//          price: 32,
-//          rating: 4,
-//          reviews: 127,
-//          badges: [
-//            BadgeWidget(
-//              text: "Offers Remote Available",
-//              color: ColorsManager.green,
-//            ),
-//          ],
-//        ),
-//        VendorCardWidget(
-//          title: "Swimming Pool Cleaning",
-//          imgPath: ImagesManager.person4,
-//          location: "Hohikor,Los Angeles",
-//          price: 25,
-//          rating: 4,
-//          reviews: 93,
-//          badges: [
-//            BadgeWidget(
-//              text: "In High Demand",
-//              color: ColorsManager.blue,
-//            ),
-//          ],
-//        ),
-//        VendorCardWidget(
-//          title: "Fence And Gate Installation",
-//          imgPath: ImagesManager.person3,
-//          location: "Hohikor,Los Angeles",
-//          price: 50,
-//          rating: 5,
-//          reviews: 22,
-//          badges: [
-//            BadgeWidget(
-//              text: "In High Demand",
-//              color: ColorsManager.blue,
-//            ),
-//            BadgeWidget(
-//              text: "Discount Available",
-//              color: ColorsManager.purple,
-//            ),
-//          ],
-//        ),
