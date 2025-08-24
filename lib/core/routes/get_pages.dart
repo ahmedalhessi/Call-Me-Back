@@ -13,6 +13,7 @@ import '../../screens/auth/forget_password_screen.dart';
 import '../../screens/auth/reset_password_screen.dart';
 import '../../screens/auth/verification_screen.dart';
 import '../../screens/intro/onboarding_screen.dart';
+import '../../screens/Services/services_screen.dart';
 import '../../screens/main/main_screen.dart';
 import 'routes_manager.dart';
 
@@ -47,6 +48,12 @@ final List<GetPage<dynamic>> getPages = [
     page: () => const ResetPasswordScreen(),
     binding: ResetPasswordBinding(),
   ),
+
+  GetPage(
+    name: RoutesManager.servicesScreen,
+    page: () => const Services(),
+  ),
+
   GetPage(
     name: RoutesManager.mainScreen,
     page: () => const MainScreen(),

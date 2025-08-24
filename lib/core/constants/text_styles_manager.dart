@@ -365,4 +365,11 @@ class TextStylesManager {
     fontWeight: FontWeight.normal,
     color: ColorsManager.primary,
   );
+
+  static final TextStyle captionSemiBoldBlueColor = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w600,
+    color: ColorsManager.blue,
+  );
+
 }
