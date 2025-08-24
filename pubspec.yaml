@@ -29,7 +29,7 @@ flutter:
 
   assets:
     - assets/images/
-    - assets/images/home/
+    # - assets/images/home/
     - assets/images/on_boarding/
     - assets/images/icons/
     - assets/images/services/

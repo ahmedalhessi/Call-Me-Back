@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeManager.light(),
           initialRoute: RoutesManager.servicesScreen,
+          //initialRoute: RoutesManager.mainScreen,
           getPages: getPages,
           // unknownRoute: GetPage(
           //   name: RoutesManager.unknownScreen,

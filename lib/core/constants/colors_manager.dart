@@ -12,6 +12,7 @@ class ColorsManager {
   static const Color titleColor = Color(0xFF222B45);
   static const Color subtitleColor = Color(0xFF8F9BB3);
   static const Color onBoardingUnselected = Color(0xFFEDF1F7);
+  static const Color tabBarUnselected = Color(0xFFB0B3B8);
 
   static const Color scaffoldBg = Color(0xFFF0F3F8);
   // static const Color dividerColor = Color(0xFFF3F4F6);
