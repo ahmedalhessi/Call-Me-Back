@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
+import '../../core/widgets/filter_widget.dart';
+
 class Services extends StatefulWidget {
   const Services({super.key});
 
@@ -33,7 +35,16 @@ class _ServicesState extends State<Services> {
           ),
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return FilterWidget();
+                    },
+                  ),
+                );
+              },
               tooltip: 'Filters',
               icon: SvgPicture.asset(
                 fit: BoxFit.contain,

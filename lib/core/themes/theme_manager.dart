@@ -51,13 +51,13 @@ class ThemeManager {
           horizontal: -2,
           vertical: -2,
         ), // يخفف المسافات
-        fillColor: MaterialStateProperty.resolveWith<Color>((states) {
-          if (states.contains(MaterialState.selected)) {
+        fillColor: WidgetStateProperty.resolveWith<Color>((states) {
+          if (states.contains(WidgetState.selected)) {
             return const Color(0xFF007AFF); // الأزرق عند التحديد
           }
           return Colors.white; // أبيض لما مش محدد
         }),
-        checkColor: MaterialStateProperty.all(Colors.white), // لون الصح
+        checkColor: WidgetStateProperty.all(Colors.white), // لون الصح
       ),
 
       textButtonTheme: TextButtonThemeData(

@@ -1,8 +1,8 @@
 import 'package:call_me_back/core/widgets/filter_section.dart';
 import 'package:flutter/material.dart';
 
-class FilterScreen extends StatelessWidget {
-  const FilterScreen({super.key});
+class FilterWidget extends StatelessWidget {
+  const FilterWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +21,17 @@ class FilterScreen extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        leading: TextButton(
-          onPressed: () {},
-          child: const Text(
-            "Reset",
-            style: TextStyle(
-              color: Colors.black,
-              fontFamily: "SFProDisplay",
-              fontSize: 15,
-              fontWeight: FontWeight.w400,
+        leading: Center(
+          child: InkWell(
+            onTap: () {},
+            child: const Text(
+              "Reset",
+              style: TextStyle(
+                color: Colors.black,
+                fontFamily: "SFProDisplay",
+                fontSize: 15,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ),
         ),
@@ -96,16 +98,6 @@ class FilterScreen extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width / 2,
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                child: Center(
-                  child: Text(
-                    "Apply",
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.white,
-                      fontFamily: "SFProDisplay",
-                    ),
-                  ),
-                ),
                 decoration: BoxDecoration(
                   color: Colors.blue,
                   borderRadius: BorderRadius.circular(12),
@@ -116,6 +108,16 @@ class FilterScreen extends StatelessWidget {
                       offset: Offset(0, 7),
                     ),
                   ],
+                ),
+                child: Center(
+                  child: Text(
+                    "Apply",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                      fontFamily: "SFProDisplay",
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 5),
