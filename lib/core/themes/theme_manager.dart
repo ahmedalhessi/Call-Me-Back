@@ -33,14 +33,33 @@ class ThemeManager {
         bodyMedium: TextStyle(
           // color: ColorsManager.textColor,
           fontSize: 14.sp,
-          fontFamily: 'Almarai',
+          fontFamily: "SFProDisplay",
         ),
       ),
       // dialogBackgroundColor: Colors.orange,
       // dividerColor: ColorsManager.dividerColor,
       checkboxTheme: CheckboxThemeData(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.r)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(2), // زوايا أنعم
+        ),
+        side: const BorderSide(
+          color: Color(0xFFBDBDBD), // خط رمادي فاتح
+          width: 1.5,
+        ),
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        visualDensity: const VisualDensity(
+          horizontal: -2,
+          vertical: -2,
+        ), // يخفف المسافات
+        fillColor: MaterialStateProperty.resolveWith<Color>((states) {
+          if (states.contains(MaterialState.selected)) {
+            return const Color(0xFF007AFF); // الأزرق عند التحديد
+          }
+          return Colors.white; // أبيض لما مش محدد
+        }),
+        checkColor: MaterialStateProperty.all(Colors.white), // لون الصح
       ),
+
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           textStyle: const TextStyle(fontFamily: 'Almarai'),

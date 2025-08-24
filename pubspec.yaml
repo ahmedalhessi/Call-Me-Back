@@ -33,3 +33,11 @@ flutter:
     - assets/images/on_boarding/
     - assets/images/icons/
     - assets/images/services/
+  fonts:
+    - family: SFProDisplay
+      fonts:
+        - asset: assets/fonts/SF_PRO_DISPLAY_REGULAR.otf
+          weight: 400
+        - asset: assets/fonts/SF_PRO_DISPLAY_BOLD.otf
+          weight: 700
+    
